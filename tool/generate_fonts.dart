@@ -24,7 +24,7 @@ void main(List<String> args) {
 
   for (Map<String, dynamic> icon in icons as Iterable<Map<String, dynamic>>) {
     icon.forEach((String iconName, dynamic iconUnicode) => generatedOutput.add(
-        "static const IconData ${ReCase(iconName).camelCase} = const FeatherIconData(0x$iconUnicode);\n"));
+        "static const IconData ${ReCase(iconName).camelCase} = const IconData(0x$iconUnicode, fontFamily: 'FeatherIcons', fontPackage: 'flutter_feather_icons');\n"));
   }
 
   generatedOutput.add("}\n");
